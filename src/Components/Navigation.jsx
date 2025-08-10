@@ -1,8 +1,11 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function Navigation() {
+  const navigate = useNavigate();
+
   useGSAP(() => {
     const nav = gsap.timeline({
       scrollTrigger: {
@@ -26,9 +29,9 @@ function Navigation() {
         <h1 className="logoName">BridgeCon</h1>
       </div>
       <div className="middle">
-        <p className="links">Home</p>
+        <p className="links" onClick={() => navigate("/")}>Home</p>
         <p className="links">Services</p>
-        <p className="links">About us</p>
+        <p className="links" onClick={() => navigate("/aboutUs")}>About us</p>
         <p className="links">Contact us</p>
       </div>
       <div className="right">
