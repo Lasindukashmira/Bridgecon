@@ -1,6 +1,7 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Navigation() {
   useGSAP(() => {
@@ -26,8 +27,17 @@ function Navigation() {
         <h1 className="logoName">BridgeCon</h1>
       </div>
       <div className="middle">
-        <p className="links">Home</p>
-        <p className="links">Services</p>
+        <p className="links">
+          <Link className="link" to="/">
+            Home
+          </Link>
+        </p>
+        <p className="links">
+          {" "}
+          <Link className="link" to="/service">
+            Services
+          </Link>
+        </p>
         <p className="links">About us</p>
         <p className="links">Contact us</p>
       </div>

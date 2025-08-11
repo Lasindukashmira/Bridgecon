@@ -14,6 +14,7 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
 nav {
   width: 100%;
   height: 10vh;
@@ -62,6 +63,11 @@ img {
   cursor: pointer;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  text-decoration: none;
+}
+.link {
+  text-decoration: none;
+  color: inherit;
 }
 
 .right {
@@ -155,6 +161,7 @@ img {
   margin-bottom: 30px;
   line-height: 130%;
   margin-top: 15px;
+  /* font-family: Archive; */
 }
 .pointrow,
 .pointrow2 {
@@ -175,6 +182,11 @@ img {
 span {
   color: #2563ea;
   font-weight: bold;
+  transition: all 0.5s ease;
+}
+span:hover {
+  transform: rotate(20%);
+  color: #eaac25;
 }
 .tag {
   display: inline-flex;
@@ -288,4 +300,198 @@ span {
 .coreServices {
   background-color: rgb(241, 241, 241);
   overflow: hidden;
+}
+
+.serviceHero {
+  width: 100%;
+  height: 90vh;
+}
+.sherocontent {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.shleft {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+.shright {
+  flex: 1;
+  align-content: center;
+  padding: 40px;
+}
+.sheroheading {
+  font-size: 50px;
+}
+.hstagcontainer {
+  display: flex;
+}
+.sherodescription {
+  font-size: 16px;
+  color: #242424;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  max-width: 600px;
+}
+.sprow {
+  display: flex;
+  margin: 20px;
+}
+.sprow p {
+  margin-left: 10px;
+}
+.spicon {
+  font-size: 20px;
+  color: #2563ea;
+}
+.exploreServicesbtn {
+  padding: 10px 20px;
+  color: white;
+  background-color: #2563ea;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+.serviceScardcontainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 10px;
+}
+
+.serviceSheading {
+  font-size: 50px;
+  font-family: Archive;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  margin-left: 50px;
+  text-align: center;
+}
+.mainServiceCard {
+  width: 350px;
+  box-shadow: 2px 3px 10px rgb(165, 165, 165);
+  padding: 20px;
+  border-radius: 10px;
+
+  transition: all 0.4s ease;
+}
+.tophalf {
+  text-align: center;
+}
+.tophalf h1 {
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+.seicons {
+  font-size: 30px;
+  color: #3879e3;
+  margin-bottom: 20px;
+}
+.brow {
+  display: flex;
+  align-items: center;
+  border-bottom: 0.5px solid #d1d5db;
+  padding: 10px 0px;
+}
+.brow p {
+  margin-left: 10px;
+  color: #242424;
+}
+.subicons {
+  font-size: 18px;
+  color: #eaac25;
+}
+
+.whychooseussection {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  /* background-color: #242424; */
+}
+.slider {
+  display: flex;
+  width: 600vw;
+  height: 100%;
+  /* background-color: #2563ea; */
+}
+.slider section {
+  width: 100vw;
+  height: 100%;
+  /* background-color: #242424; */
+}
+
+.whychmain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.whychminner {
+  position: relative;
+  /* background-color: #242424; */
+}
+.whychminner h1 {
+  font-size: 100px;
+  font-family: Archive;
+}
+.box {
+  position: absolute;
+  background-color: #2563ea;
+  color: white;
+  padding: 10px;
+  border: 5px solid white;
+  outline: none;
+  left: 50%;
+  top: 70%;
+  transform: translate(-50%) rotate(-8deg);
+}
+.box h1 {
+  font-size: 60px;
+}
+/* .slider section:nth-child(even) {
+  background-color: #2563ea;
+} */
+.whpsections {
+  display: flex;
+  overflow: hidden;
+}
+.whychleft,
+.whychright {
+  flex: 1;
+  padding: 50px;
+}
+.whychright {
+  align-content: center;
+}
+.whychright h1 {
+  font-size: 50px;
+  font-family: Archive;
+}
+.headwrapper {
+  margin-bottom: 40px;
+  position: relative;
+}
+.iconwrapper {
+  width: 40px;
+  height: 40px;
+  background-color: #2563ea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  position: absolute;
+  top: -25px;
+  left: -25px;
+  border: 5px solid white;
+  box-sizing: content-box;
+  z-index: 50;
+}
+.whchicon {
+  font-size: 20px;
+  color: white;
 }
