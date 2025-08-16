@@ -39,7 +39,12 @@ function Navigation() {
           </Link>
         </p>
         <p className="links">About us</p>
-        <p className="links">Contact us</p>
+        <p className="links">
+          {" "}
+          <Link className="link" to="/contact">
+            Contact us
+          </Link>
+        </p>
       </div>
       <div className="right">
         <button className="getStart">Get Start</button>

@@ -19,7 +19,6 @@ function ServiceHero() {
       mask: "lines",
     });
 
-    console.log(paragraphS.lines);
     const fromUp = [...heading.words.slice(0, 2), ...heading.words.slice(3, 5)];
     const fromDown = [heading.words[2], heading.words[5]];
 
@@ -42,7 +41,7 @@ function ServiceHero() {
         opacity: 0,
         scale: 10,
         duration: 0.5,
-        ease: "bounce",
+        ease: "power",
       });
   }, []);
   return (

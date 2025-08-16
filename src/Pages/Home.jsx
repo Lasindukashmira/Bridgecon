@@ -3,15 +3,17 @@ import Hero from "../Components/Hero";
 import AboutSection from "../Components/AboutSection";
 import CoreServices from "../Components/CoreServices";
 import WhyChooseUsSection from "../Components/WhyChooseUsSection";
+import { useMediaQuery } from "react-responsive";
+import WhyChooseusMobile from "../Components/WhyChooseusMobile";
 
 function Home() {
+  const normalSection = useMediaQuery({ maxWidth: 850 });
   return (
     <>
       <Hero />
       <AboutSection />
       <CoreServices />
-      <WhyChooseUsSection />
-      <div style={{ height: "100vh", backgroundColor: "red" }}></div>
+      {!normalSection ? <WhyChooseUsSection /> : <WhyChooseusMobile />}
     </>
   );
 }

@@ -63,7 +63,7 @@ function WhyChooseUsSection() {
         trigger: ".whychmain",
         containerAnimation: scrolltl,
         start: "2% left",
-        markers: true,
+
         scrub: true,
       },
     });

@@ -30,19 +30,23 @@ function CoreServices() {
       duration: 1,
     });
 
-    gsap.from(".serviceCard", {
-      scrollTrigger: {
-        trigger: ".coreServices",
-        start: "top 60%",
+    const serviceCard = gsap.utils.toArray(".serviceCard");
 
-        scrub: true,
-        end: "top top",
-      },
-      xPercent: 50,
-      yPercent: 80,
-      opacity: 0,
-      duration: 1,
-      stagger: 0.06,
+    serviceCard.forEach((card) => {
+      gsap.from(card, {
+        scrollTrigger: {
+          trigger: card,
+          start: "top 70%",
+
+          scrub: true,
+          end: "top 40%",
+        },
+        xPercent: 50,
+        yPercent: 80,
+        opacity: 0,
+        duration: 1,
+        stagger: 0.06,
+      });
     });
   }, []);
   return (

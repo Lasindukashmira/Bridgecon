@@ -1,0 +1,167 @@
+.ResponsiveNav {
+  width: 55vw;
+  height: 100vh;
+  background-color: rgb(0, 0, 0);
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 90;
+}
+.nalinkcontainer {
+  padding: 20px;
+  margin-top: 50px;
+}
+.rlink {
+  font-size: 40px;
+  margin: 20px 0px;
+}
+.rlinks {
+  text-decoration: none;
+  color: white;
+}
+.blob {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(50%);
+  width: 60%;
+  z-index: -1;
+}
+.MobileWhychooseUsSection {
+  padding: 40px;
+}
+.mwhychHeading {
+  font-size: 50px;
+  font-family: Archive;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+.mwhychinner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.mwhychCard {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 2px 5px 10px rgb(216, 216, 216);
+  padding: 20px;
+  margin: 10px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.miconwrapper {
+  background-color: #387ae34f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  padding: 20px;
+  margin-right: 20px;
+  color: #3879e3;
+  border-radius: 20px;
+}
+.mwhychheading {
+  margin-bottom: 10px;
+}
+.mwhychPara {
+  color: #242424;
+}
+@media screen and (max-width: 600px) {
+  .welcome {
+    font-size: 40px;
+  }
+  .brandname {
+    font-size: 70px;
+  }
+  .mwhychheading {
+    font-size: 23px;
+  }
+}
+@media screen and (max-width: 750px) {
+  .serviceCard {
+    width: 100%;
+  }
+  .mainServiceCard {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 850px) {
+  .getStart {
+    display: none;
+  }
+  .middle {
+    display: none;
+  }
+  .hamcontainer {
+    display: flex;
+  }
+  .shleft {
+    display: none;
+  }
+  .serviceCard {
+    width: 100%;
+  }
+  .wleft {
+    display: none;
+  }
+  .footermiddle {
+    display: none;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .sright {
+    display: none;
+  }
+  .footermiddle {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 1250px) {
+  .slogan {
+    font-size: 45px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .whoHeading {
+    text-align: center;
+    font-size: 40px;
+  }
+  .wpara {
+    text-align: justify;
+  }
+
+  .coreSheading {
+    font-size: 40px;
+  }
+  .slogan {
+    font-size: 38px;
+  }
+  .rlink {
+    font-size: 25px;
+    margin: 15px 0px;
+  }
+  .sheroheading {
+    font-size: 35px;
+  }
+  .mwhychHeading {
+    font-size: 40px;
+  }
+  .mwhychPara {
+    display: none;
+  }
+  .footerright {
+    margin-top: 40px;
+  }
+  .footerleft {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+}
