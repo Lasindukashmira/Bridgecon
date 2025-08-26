@@ -19,7 +19,6 @@ function Service() {
       <ServiceHero />
       <MainServiceSection />
       <OurProcessSection />
-      <div style={{ height: "100vh" }} />
     </>
   );
 }

@@ -14,6 +14,7 @@ import ResponsiveNav from "./Components/ResponsiveNav";
 import Hamburger from "./Components/Hamburger";
 import { useMediaQuery } from "react-responsive";
 import Footer from "./Components/Footer";
+import AboutUs from "./Pages/AboutUs";
 
 function App() {
   gsap.registerPlugin(SplitText, ScrollTrigger, ScrollSmoother);
@@ -38,6 +39,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/service" element={<Service />} />
+        <Route path="/about" element={<AboutUs />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />

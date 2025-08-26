@@ -38,7 +38,11 @@ function Navigation() {
             Services
           </Link>
         </p>
-        <p className="links">About us</p>
+        <p className="links">
+          <Link className="link" to="/about">
+            About us
+          </Link>
+        </p>
         <p className="links">
           {" "}
           <Link className="link" to="/contact">

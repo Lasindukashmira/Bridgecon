@@ -807,3 +807,156 @@ input[type="submit"] {
   font-size: 15px;
   margin-left: 20px;
 }
+
+.AboutUsPage {
+  width: 100%;
+  overflow: hidden;
+}
+.aboutHero {
+  position: relative;
+  width: 100%;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  padding: 40px;
+}
+.aLeft,
+.aRight {
+  flex: 1;
+  padding: 20px;
+}
+.aboutTag {
+  display: inline-block;
+  padding: 6px 12px;
+  background: #2563ea0f;
+  color: #2563ea;
+  border-radius: 999px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.aboutTitle {
+  font-size: 56px;
+  font-family: Archive;
+  line-height: 120%;
+}
+.aboutLead {
+  margin-top: 14px;
+  color: #242424;
+}
+.aboutHeroImage {
+  width: 100%;
+  max-width: 520px;
+  display: block;
+  margin-left: auto;
+}
+.aboutCircle {
+  position: absolute;
+  width: 40vw;
+  height: 40vw;
+  border-radius: 50%;
+  background: #eaac25;
+  right: -10%;
+  bottom: -20%;
+  z-index: -1;
+}
+
+/* Mission & Vision */
+.missionVision {
+  padding: 40px 20px;
+  background: #f7f7f7;
+}
+.sectionHeading {
+  font-size: 42px;
+  font-family: Archive;
+  text-align: center;
+}
+.mvGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+.mvCard {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+.mvIcon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #2563ea1d;
+  color: #2563ea;
+}
+.mvTitle {
+  margin-top: 10px;
+  font-size: 20px;
+}
+.mvText {
+  margin-top: 8px;
+  color: #242424;
+}
+
+/* Values */
+.ourValues {
+  padding: 40px 20px;
+}
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+.valueCard {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+.valueTitle {
+  font-size: 18px;
+  font-weight: 700;
+}
+.valueText {
+  margin-top: 6px;
+  color: #242424;
+}
+
+/* Stats */
+.aboutStats {
+  padding: 40px 20px 60px;
+}
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  margin-top: 12px;
+}
+.stat {
+  background: #2563ea;
+  color: white;
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+}
+.statNumber {
+  font-size: 36px;
+  font-weight: 800;
+}
+.statLabel {
+  opacity: 0.9;
+}
+
+/* Responsive tweaks */
+@media (max-width: 920px) {
+  .aboutHero {
+    flex-direction: column;
+  }
+  .aboutTitle {
+    font-size: 40px;
+  }
+}
