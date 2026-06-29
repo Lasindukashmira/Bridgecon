@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy Node.js app to Azure Web App - Bridgecon
+name: Build and deploy Node.js app to Azure Web App - BridgeCon
 
 on:
   push:
@@ -21,7 +21,7 @@ jobs:
       - name: Set up Node.js version
         uses: actions/setup-node@v3
         with:
-          node-version: '24.x'
+          node-version: '22.x'
 
       - name: npm install, build, and test
         run: |
@@ -51,15 +51,15 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_AD23498077FF4DD4AED76B77859CF277 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_5550FF5FDC7D4736AEAA3FF2963D8986 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_3762697420BC4E0C8D21A9896D384920 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_91E71D8A3E3B42258A4E0158BBEA9160 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_F5A070AAC01C40DD84EE088C7B1F274F }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_FA69B60B7AF340E6B9294C83963B8101 }}
 
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
-          app-name: 'Bridgecon'
+          app-name: 'BridgeCon'
           slot-name: 'Production'
           package: .
           
