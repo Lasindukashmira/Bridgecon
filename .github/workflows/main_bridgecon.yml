@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy Node.js app to Azure Web App - BridgeCon
+name: Build and deploy Node.js app to Azure Web App - Bridgecon
 
 on:
   push:
@@ -11,7 +11,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     permissions:
       contents: read #This is required for actions/checkout
 
@@ -28,14 +28,12 @@ jobs:
           npm install
           npm run build --if-present
           npm run test --if-present
-      - name: Check build output
-        run: ls -R
-
+      
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
-          name: dist
-          path: dist
+          name: node-app
+          path: .
 
   deploy:
     runs-on: ubuntu-latest
@@ -48,21 +46,20 @@ jobs:
       - name: Download artifact from build job
         uses: actions/download-artifact@v4
         with:
-          name: dist
-          path: dist
+          name: node-app
       
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_91E71D8A3E3B42258A4E0158BBEA9160 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_F5A070AAC01C40DD84EE088C7B1F274F }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_FA69B60B7AF340E6B9294C83963B8101 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_1FF4E7815B5946D6950B24477A931482 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_C5CA68B79B0A41059FECEA410D7BDED0 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_21DB165BF845488E8F43733EC41B1B08 }}
 
       - name: 'Deploy to Azure Web App'
-        id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
+        id: deploy-to-webapp
         with:
-          app-name: 'BridgeCon'
+          app-name: 'Bridgecon'
           slot-name: 'Production'
-          package: dist
+          package: .
           
